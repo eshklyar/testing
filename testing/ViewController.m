@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property NSArray *myArrayOfArrays;
 
 @end
 
@@ -16,12 +17,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    self.myArrayOfArrays = @[@[@1,@2,@3],@[@4,@5,@6],@[@7,@8,@9]];
+    NSLog(@"first element in first array of myArrayOfArrays ,%@", self.myArrayOfArrays[0][0]);
+    int x = self.myArrayOfArrays[0][0];
+    NSNumber *i = [NSNumber numberWithInt:self.myArrayOfArrays[0][0]];
+    int j = [i intValue];
+    NSLog(@"x is %d", x);
+    NSLog(@"i is %@", i);
+    NSLog(@"j is %d", j);
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end
